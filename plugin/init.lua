@@ -1,7 +1,7 @@
 local current_file = vim.fn.expand("%:t")
+local skeleton_php_file = "0r " .. vim.fn.getcwd() .. "/skeleton.php"
 local root_namespace = ""
 local php_command = ""
-local skeleton_php_file = "0r $HOME/plugins/buf_write.nvim/skeleton.php"
 
 local file_exists = function(name)
    local f = io.open(name,"r")
