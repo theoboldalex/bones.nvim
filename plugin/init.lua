@@ -9,7 +9,7 @@ local file_exists = function(name)
 end
 
 if file_exists("composer.json") then
-    -- get namespace from ./vendor/composer/autoload_psr4.php
+    -- TODO: get namespace from ./vendor/composer/autoload_psr4.php
     root_namespace = "App"
 end
 
@@ -36,7 +36,7 @@ local skeleton_options = {
     },
     sh = {
         pattern = {"*.sh"},
-        command = "0r $HOME/.config/nvim/templates/skeleton.sh"
+        command = "0r " .. vim.fn.getcwd() .. "/skeleton.sh"
     }
 }
 
